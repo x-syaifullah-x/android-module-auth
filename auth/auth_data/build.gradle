@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id "com.google.gms.google-services"
+}
+
+android {
+    compileSdkVersion build_versions.compile_sdk_version
+    buildToolsVersion build_versions.build_tools_version
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk_version
+        targetSdkVersion build_versions.target_sdk_version
+        versionCode build_versions.version_code
+        versionName build_versions.version_name
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    packagingOptions {
+        exclude "**/attach_hotspot_windows.dll"
+//        exclude "META-INF/licenses/**"
+        exclude "META-INF/licenses/ASM"
+        exclude "META-INF/AL2.0"
+        exclude "META-INF/LGPL2.1"
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    api project(':auth:auth_domain')
+
+    testImplementation "com.github.x-syaifullah-x:android-test:$vMyModuleAndroidTest"
+    androidTestImplementation "com.github.x-syaifullah-x:android-test:$vMyModuleAndroidTest"
+
+    api "androidx.room:room-runtime:2.3.0-rc01"
+    api "androidx.room:room-ktx:2.3.0-rc01"
+    androidTestImplementation "androidx.room:room-testing:2.3.0-rc01"
+
+    api "androidx.work:work-runtime:2.5.0"
+    api "androidx.work:work-runtime-ktx:2.5.0"
+    api "androidx.work:work-gcm:2.5.0"
+    androidTestImplementation "androidx.work:work-testing:2.5.0"
+
+    api "com.google.firebase:firebase-auth:20.0.4"
+    api 'com.google.firebase:firebase-messaging:21.1.0'
+
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
+}

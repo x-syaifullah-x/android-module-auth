@@ -1,0 +1,14 @@
+rootProject.name = "Android Auth"
+
+include(
+        ":app",
+        ":app_required_login",
+
+        ':auth',
+        ':auth:auth_presentation',
+        ':auth:auth_data',
+        ':auth:auth_domain',
+)
+
+//include ":base_domain"
+//project(":base_domain").projectDir = file("../android-base/base_domain")
