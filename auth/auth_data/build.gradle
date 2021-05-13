@@ -52,17 +52,17 @@ dependencies {
     testImplementation "com.github.x-syaifullah-x:android-test:$vMyModuleAndroidTest"
     androidTestImplementation "com.github.x-syaifullah-x:android-test:$vMyModuleAndroidTest"
 
-    api "androidx.room:room-runtime:2.3.0-rc01"
-    api "androidx.room:room-ktx:2.3.0-rc01"
-    androidTestImplementation "androidx.room:room-testing:2.3.0-rc01"
+    api "androidx.room:room-runtime:$vRoom"
+    api "androidx.room:room-ktx:$vRoom"
+    androidTestImplementation "androidx.room:room-testing:$vRoom"
 
-    api "androidx.work:work-runtime:2.5.0"
-    api "androidx.work:work-runtime-ktx:2.5.0"
-    api "androidx.work:work-gcm:2.5.0"
-    androidTestImplementation "androidx.work:work-testing:2.5.0"
+    api "androidx.work:work-runtime:2.6.0-alpha02"
+    api "androidx.work:work-runtime-ktx:2.6.0-alpha02"
+    api "androidx.work:work-gcm:2.6.0-alpha02"
+    androidTestImplementation "androidx.work:work-testing:2.6.0-alpha02"
 
-    api "com.google.firebase:firebase-auth:20.0.4"
-    api 'com.google.firebase:firebase-messaging:21.1.0'
+    api "com.google.firebase:firebase-auth:21.0.0"
+    api 'com.google.firebase:firebase-messaging:22.0.0'
 
     api 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
 }

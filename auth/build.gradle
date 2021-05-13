@@ -39,5 +39,5 @@ dependencies {
     api project(":auth:auth_domain")
     api project(":auth:auth_presentation")
 
-    kapt "androidx.room:room-compiler:2.3.0-rc01"
+    kapt "androidx.room:room-compiler:$vRoom"
 }
