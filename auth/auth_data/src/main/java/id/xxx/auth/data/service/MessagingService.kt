@@ -20,8 +20,8 @@ class MessagingService : FirebaseMessagingService() {
         Log.d("TAG", "Refreshed token: $token")
     }
 
-    override fun handleIntent(p0: Intent?) {
-        super.handleIntent(p0)
+    override fun handleIntent(intent: Intent) {
+        super.handleIntent(intent)
 
         GlobalScope.launch(Dispatchers.Default) {
             iInteractor.signOut().drop(1).firstOrNull()
