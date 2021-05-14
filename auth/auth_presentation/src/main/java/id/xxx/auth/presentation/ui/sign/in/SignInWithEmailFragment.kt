@@ -79,7 +79,7 @@ class SignInWithEmailFragment : Fragment(R.layout.fragment_sign_in_with_email) {
                                     findNavController().navigate(R.id.sign_in_move_to_fragment_verify)
                                 }
                             },
-                            blockError = { user, throwable ->
+                            blockError = { _, throwable ->
                                 makeText(
                                     requireContext(),
                                     throwable.localizedMessage,

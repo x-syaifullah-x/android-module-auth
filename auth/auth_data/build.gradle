@@ -1,7 +1,6 @@
 plugins {
-    id 'com.android.library'
-    id 'kotlin-android'
-    id 'kotlin-kapt'
+    id "com.android.library"
+    id "kotlin-android"
     id "com.google.gms.google-services"
 }
 
@@ -35,7 +34,7 @@ android {
 
     packagingOptions {
         exclude "**/attach_hotspot_windows.dll"
-//        exclude "META-INF/licenses/**"
+        exclude "META-INF/licenses/**"
         exclude "META-INF/licenses/ASM"
         exclude "META-INF/AL2.0"
         exclude "META-INF/LGPL2.1"
@@ -47,7 +46,7 @@ android {
 }
 
 dependencies {
-    api project(':auth:auth_domain')
+    api project(":auth:auth_domain")
 
     testImplementation "com.github.x-syaifullah-x:android-test:$vMyModuleAndroidTest"
     androidTestImplementation "com.github.x-syaifullah-x:android-test:$vMyModuleAndroidTest"
@@ -62,7 +61,7 @@ dependencies {
     androidTestImplementation "androidx.work:work-testing:2.6.0-alpha02"
 
     api "com.google.firebase:firebase-auth:21.0.0"
-    api 'com.google.firebase:firebase-messaging:22.0.0'
+    api "com.google.firebase:firebase-messaging:22.0.0"
 
-    api 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1"
 }

@@ -40,12 +40,12 @@ android {
 
 dependencies {
 
-    api project(':auth:auth_domain')
+    api project(":auth:auth_domain")
 
     api "com.github.x-syaifullah-x.android-module-base:base_presentation:$vAndroidModuleBase"
 
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation "androidx.appcompat:appcompat:1.2.0"
+    implementation "androidx.constraintlayout:constraintlayout:2.0.4"
     implementation "com.airbnb.android:lottie:3.5.0"
 
     testImplementation "com.github.x-syaifullah-x:android-module-test:$vMyModuleAndroidTest"
